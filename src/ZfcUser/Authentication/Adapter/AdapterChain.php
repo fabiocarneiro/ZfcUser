@@ -60,12 +60,14 @@ class AdapterChain extends EventProvider implements AdapterInterface
                 return $result->last();
             }
 
+            /*
             throw new Exception\AuthenticationEventException(
                 sprintf(
                     'Auth event was stopped without a response. Got "%s" instead',
                     is_object($result->last()) ? get_class($result->last()) : gettype($result->last())
                 )
             );
+            */
         }
 
         if ($e->getIdentity()) {
